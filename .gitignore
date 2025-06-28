@@ -1,2 +1,4 @@
 binary_test_file 
 # A Mach-O binary file
+output.txt
+# A text file that contains output.
