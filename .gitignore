@@ -8,3 +8,6 @@ python.exe
 # To decompose on Windows.
 Binary-Decomposer/
 # Release folder
+Binary-Decomposer.zip
+# Release file
+.DS_Store
