@@ -2,5 +2,7 @@ binary_test_file
 # A Mach-O binary file
 output.txt
 # A text file that contains output.
+binary_output.txt
+# A text file that contains binary.
 python.exe
-# To decompose on Windows
+# To decompose on Windows.
