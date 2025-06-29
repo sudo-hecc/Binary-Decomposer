@@ -6,3 +6,5 @@ binary_output.txt
 # A text file that contains binary.
 python.exe
 # To decompose on Windows.
+Binary-Decomposer/
+# Release folder
