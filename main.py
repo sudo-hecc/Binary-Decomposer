@@ -28,10 +28,35 @@ def main():
             for byte_str in binary_str.split():
                 if byte_str in printable_bytes:
                     f.write(bytes_meaning[byte_str])
-        with open("binary_output.txt", "w") as f:
+        with open("binary_raw_output.txt", "w") as f:
             f.write(binary_str)
+        with open("binary_output.txt", "w") as f:
+            for byte_str in binary_str.split():
+                if byte_str in printable_bytes:
+                    f.write(byte_str + " ")
         print(f"Output from {input_file} written to output.txt")
+    except FileNotFoundError:
+        # FILE HAS NOT BEEN FOUND
+        print(f"Error: {input_file} not found.")
+        sys.exit(1)
+    except PermissionError:
+        # FILE PERMISSIONS RESTRICT THE OS MODULE
+        print(f"Error: Permission denied for {input_file}.")
+        sys.exit(1)
+    except IsADirectoryError:
+        # `input_file` IS A DIRECTORY, NOT BINARY FILE
+        print(f"Error: {input_file} is a directory, not a file.")
+        sys.exit(1)
+    except OSError as o:
+        # OS MODULE ERROR
+        print(f"Error: {input_file}: {o}")
+        sys.exit(1)
+    except KeyboardInterrupt:
+        # HANDLE KEYBOARD INTERRUPT
+        print("Process interrupted by user.")
+        sys.exit(127)
     except Exception as e:
+        # GENERAL EXCEPTION HANDLER
         print(f"Error: {input_file}: {e}")
         sys.exit(1)
 

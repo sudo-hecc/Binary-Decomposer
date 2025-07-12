@@ -4,6 +4,8 @@ output.txt
 # A text file that contains output.
 binary_output.txt
 # A text file that contains binary.
+binary_raw_output.txt
+# A text file that contains raw binary output.
 python.exe
 # To decompose on Windows.
 Binary-Decomposer/
