@@ -54,7 +54,7 @@ def main():
     except KeyboardInterrupt:
         # HANDLE KEYBOARD INTERRUPT
         print("Process interrupted by user.")
-        sys.exit(127)
+        sys.exit(130)
     except Exception as e:
         # GENERAL EXCEPTION HANDLER
         print(f"Error: {input_file}: {e}")
