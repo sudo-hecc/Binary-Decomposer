@@ -1,13 +1,13 @@
 binary_test_file 
 # A Mach-O binary file
+binary_test_file.exe
+# A Windows executable binary file
 output.txt
 # A text file that contains output.
 binary_output.txt
 # A text file that contains binary.
 binary_raw_output.txt
 # A text file that contains raw binary output.
-python.exe
-# To decompose on Windows.
 Binary-Decomposer/
 # Release folder
 Binary-Decomposer.zip
